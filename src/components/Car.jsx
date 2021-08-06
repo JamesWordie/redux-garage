@@ -10,7 +10,7 @@ const Car = ({ car }) => {
         <div className="col-md-9">
           <div className="card-body d-flex justify-content-evenly flex-column h-100">
             <h5 className="card-title">
-              {car.brand}
+              {car.brand}--
               {car.model}
             </h5>
             <p className="card-text">

@@ -2,6 +2,7 @@ import React from 'react';
 import Car from '../components/Car';
 import { connect } from 'react-redux';
 import { fetchCars } from '../actions/index';
+import GarageDetail from './GarageDetail';
 
 class CarIndex extends React.Component {
   componentDidUpdate() {
@@ -18,8 +19,11 @@ class CarIndex extends React.Component {
 
   render() {
     return (
-      <div className="col-md-9 bg-light shadow">
-        {this.renderCarList()}
+      <div className="row my-5 h-100">
+        <GarageDetail garage={this.props.garage} />
+        <div className="col-md-9 bg-light shadow">
+          {this.renderCarList()}
+        </div>
       </div>
     )
   }
