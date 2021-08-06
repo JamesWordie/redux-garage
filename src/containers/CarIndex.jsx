@@ -5,8 +5,8 @@ import { fetchCars } from '../actions/index';
 import GarageDetail from './GarageDetail';
 
 class CarIndex extends React.Component {
-  componentDidUpdate() {
-    this.props.fetchCars(this.props.garage);
+  componentDidMount() {
+    this.props.fetchCars();
   }
 
   renderCarList = () => {

@@ -6,7 +6,7 @@ const fetchCarsReducer = (state = [], action) => {
     case FETCH_CARS:
       return action.payload;
     case CREATE_CAR:
-      return [ ...state, action.payload];
+      return [ ...state, action.payload ];
     default:
       return state;
   }
