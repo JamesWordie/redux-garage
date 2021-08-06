@@ -7,7 +7,7 @@ import reduxThunk from 'redux-thunk';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './components/app';
 import reducers from './reducers';
-import cars from './cars';
+import { cars } from './cars';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const garage = `garage${Math.floor(10 + (Math.random() * 90))}`; // prompt('What is your garage called?')
