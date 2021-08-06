@@ -5,7 +5,7 @@ const GarageDetail = ({ garage }) => {
   return (
     <div className="col-md-3 bg-light p-2 shadow">
       <div className="card h-100">
-        <img src="logo192.png" alt="" className="rounded-top" />
+        {/* <img src="logo192.png" alt="" className="rounded-top" /> */}
         <div className="card-body mt-5 py-4 border">
           <h3 className="card-title text-center mb-3">{garage}</h3>
           <p className="card-text text-muted">This is my garage, a react app where you get car data from an API then using CRUD methods, with React Router, build out this app.</p>

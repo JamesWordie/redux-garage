@@ -1,6 +1,6 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
-import history from '../history';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+// import history from '../history';
 import CarIndex from '../containers/CarIndex';
 // import CarShow from '../containers/CarShow';
 // import CarEdit from '../containers/CarEdit';
@@ -10,7 +10,8 @@ import CarCreate from '../containers/CarCreate';
 const App = () => {
   return (
     <div>
-      <Router history={history}>
+      <BrowserRouter>
+      {/* <Router history={history}> */}
         <div className="container">
           <Switch>
             <Route path="/" exact component={CarIndex} />
@@ -20,7 +21,7 @@ const App = () => {
             <Route path='/cars/:id' exact component={CarShow} /> */}
           </Switch>
         </div>
-      </Router>
+      </BrowserRouter>
     </div>
   )
 }

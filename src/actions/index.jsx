@@ -1,6 +1,6 @@
 import { FETCH_CARS, CREATE_CAR } from '../reducers/fetchCarsReducer';
 import garageApi from '../api/garageApi';
-import history from '../history';
+// import history from '../history';
 
 export const fetchCars = (garage) => async dispatch => {
   const response = await garageApi.get(`/${garage}/cars`);
@@ -13,5 +13,5 @@ export const createCar = (formValues) => async (dispatch, getState) => {
   const response = await garageApi.post(`/${garage}/cars`, { ...formValues, garage });
 
   dispatch({ type: CREATE_CAR, payload: [response.data] });
-  history.push('/');
+  // history.push('/');
 }
