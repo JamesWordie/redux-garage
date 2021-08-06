@@ -51,6 +51,7 @@ const CarForm = (props) => {
     <Form
       onSubmit={onSubmit}
       validate={validate}
+      initialValues={props.initialValues}
       render={({ handleSubmit }) => (
         <form onSubmit={handleSubmit} className='p-4 my-2 shadow bg-light'>
             <Field name="brand" component={renderInput} label="Enter the brand" />

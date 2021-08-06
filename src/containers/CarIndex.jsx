@@ -3,16 +3,33 @@ import Car from '../components/Car';
 import { connect } from 'react-redux';
 import { fetchCars } from '../actions/index';
 import GarageDetail from './GarageDetail';
+import { Link } from 'react-router-dom';
 
 class CarIndex extends React.Component {
   componentDidMount() {
     this.props.fetchCars();
   }
 
-  renderCarList = () => {
+  renderAdminButton(car) {
+    if (this.props.garage === car.garage) {
+      return (
+        <div className="btn-group align-self-center">
+          {/* <Link to={`/cars/edit/${car.id}`} className="btn btn-outline-info">Edit</Link> */}
+          <Link to={`/cars/${car.id}`} className="btn btn-outline-info">More Info</Link>
+        </div>
+      )
+    }
+  }
+
+  renderCarList() {
     return this.props.cars.map(car => {
       return (
-        <Car car={car} key={car.id} />
+        <div className="card my-3 border-info" key={car.id}>
+          <div className="row g-0">
+            <Car car={car} />
+            {this.renderAdminButton(car)}
+          </div>
+        </div>
       )
     })
   }
